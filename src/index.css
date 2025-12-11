@@ -2,6 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --radius: 0.5rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.141 0.005 285.823);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.141 0.005 285.823);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.141 0.005 285.823);
+  --primary: oklch(0.54596 0.21532 262.87191);
+  --primary-foreground: oklch(0.141 0.005 285.823);
+  --secondary: oklch(0.96844 0.00682 247.89514);
+  --secondary-foreground: oklch(0.141 0.005 285.823);
+  --accent: oklch(0.96844 0.00682 247.89514);
+  --accent-foreground: oklch(0.141 0.005 285.823);
+  --destructive: oklch(0.63683 0.20776 25.32589);
+  --destructive-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.96955 0 0);
+  --muted-foreground: oklch(0.141 0.005 285.823);
+  --border: oklch(0.91953 0.0063 266.25971);
+  --input: oklch(0.91953 0.0063 266.25971);
+  --ring: oklch(0.54596 0.21532 262.87191);
+}
+
+.dark {
+  --background: oklch(0.13706 0.03597 258.52581);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.13706 0.03597 258.52581);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.19946 0.00836 266.04093);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.62318 0.18793 259.79641);
+  --primary-foreground: oklch(0.141 0.005 285.823);
+  --secondary: oklch(0.28001 0.03693 259.97396);
+  --secondary-foreground: oklch(0.985 0 0);
+  --accent: oklch(0.28001 0.03693 259.97396);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.63683 0.20776 25.32589);
+  --destructive-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.23278 0.08866 263.36905);
+  --muted-foreground: oklch(0.985 0 0);
+  --border: oklch(0.27105 0.01373 265.97524);
+  --input: oklch(0.27105 0.01373 265.97524);
+  --ring: oklch(0.62318 0.18793 259.79641);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
