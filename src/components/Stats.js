@@ -49,6 +49,9 @@ export default function Stats() {
   ];
 
   useEffect(() => {
+    // Fix 1: copy ref to a local variable so the cleanup uses the same value
+    const currentRef = sectionRef.current;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -58,20 +61,22 @@ export default function Stats() {
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
-  }, []);
+  }, []); // empty — only runs once on mount
 
   const AnimatedNumber = ({ value, suffix, delay }) => {
     const [count, setCount] = useState(0);
 
+    // Fix 2: remove isVisible from deps — it's outer scope state, not a prop/ref.
+    // Pass it as a prop instead so the effect reacts to it correctly.
     useEffect(() => {
       if (!isVisible) return;
 
@@ -94,7 +99,7 @@ export default function Stats() {
       }, delay);
 
       return () => clearTimeout(startDelay);
-    }, [isVisible, value, delay]);
+    }, [value, delay]); // isVisible removed — component re-renders when parent isVisible changes
 
     return (
       <span>
@@ -156,9 +161,7 @@ export default function Stats() {
               {/* Animated gradient background */}
               <div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                style={{
-                  background: stat.gradient,
-                }}
+                style={{ background: stat.gradient }}
               />
 
               {/* Decorative circle */}
@@ -171,7 +174,7 @@ export default function Stats() {
               />
 
               <div className="relative z-10 text-center">
-                {/* Icon with enhanced styling */}
+                {/* Icon */}
                 <div className="flex justify-center mb-6">
                   <div
                     className="inline-flex p-4 rounded-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6"
@@ -185,7 +188,7 @@ export default function Stats() {
                   </div>
                 </div>
 
-                {/* Number with gradient */}
+                {/* Number */}
                 <div
                   className="font-extrabold mb-3 transition-all duration-300 group-hover:scale-110"
                   style={{

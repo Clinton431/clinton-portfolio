@@ -1,5 +1,5 @@
 import React from "react";
-import { Phone, MapPin, Calendar, Briefcase, Award, Code } from "lucide-react";
+import { Phone, MapPin, Calendar, Award, Code } from "lucide-react";
 
 export default function About() {
   return (
@@ -73,7 +73,7 @@ export default function About() {
                 experience in full-stack development and process automation. My
                 journey has taken me through developing healthcare information
                 systems at the Ministry of Health, where I improved data
-                management and reduced manual workloads significantly.I have
+                management and reduced manual workloads significantly. I have
                 also developed e-commerce platforms.
               </p>
               <p
@@ -226,7 +226,7 @@ export default function About() {
 
                 {/* Education Item 2 */}
                 <div
-                  className="relative pl-6 border-l-2"
+                  className="relative pl-6 pb-6 border-l-2"
                   style={{ borderColor: "rgba(102, 126, 234, 0.3)" }}
                 >
                   <div
@@ -256,6 +256,8 @@ export default function About() {
                     <span>Graduated: August 2025</span>
                   </div>
                 </div>
+
+                {/* Education Item 3 */}
                 <div
                   className="relative pl-6 border-l-2"
                   style={{ borderColor: "rgba(102, 126, 234, 0.3)" }}

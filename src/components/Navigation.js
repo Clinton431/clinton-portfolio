@@ -24,7 +24,6 @@ export default function Navigation({ darkMode }) {
   const scrollToSection = (e, href) => {
     e.preventDefault();
 
-    // Handle scroll to top for home
     if (href === "#" || href === "#home") {
       window.scrollTo({ top: 0, behavior: "smooth" });
       setIsMobileMenuOpen(false);
@@ -36,6 +35,11 @@ export default function Navigation({ darkMode }) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
       setIsMobileMenuOpen(false);
     }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -61,11 +65,10 @@ export default function Navigation({ darkMode }) {
           className="mx-auto px-6 flex items-center justify-between"
           style={{ maxWidth: 1280 }}
         >
-          {/* Logo */}
-          <a
-            href="#"
-            onClick={(e) => scrollToSection(e, "#")}
-            className="text-2xl font-bold"
+          {/* Logo — button instead of <a href="#"> to satisfy accessibility */}
+          <button
+            onClick={scrollToTop}
+            className="text-2xl font-bold bg-transparent border-none p-0 cursor-pointer"
             style={{
               background:
                 "linear-gradient(to right, var(--primary), var(--secondary))",
@@ -75,7 +78,7 @@ export default function Navigation({ darkMode }) {
             }}
           >
             CN
-          </a>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
