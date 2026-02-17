@@ -69,12 +69,12 @@ export default function About() {
                   lineHeight: "1.75",
                 }}
               >
-                I'm a detail-oriented Software Engineering graduate with
-                hands-on experience in full-stack development and process
-                automation. My journey has taken me through developing
-                healthcare information systems at the Ministry of Health, where
-                I improved data management and reduced manual workloads
-                significantly.
+                I'm a detail-oriented junior Software Engineer with hands-on
+                experience in full-stack development and process automation. My
+                journey has taken me through developing healthcare information
+                systems at the Ministry of Health, where I improved data
+                management and reduced manual workloads significantly.I have
+                also developed e-commerce platforms.
               </p>
               <p
                 className="leading-relaxed"
@@ -256,6 +256,37 @@ export default function About() {
                     <span>Graduated: August 2025</span>
                   </div>
                 </div>
+                <div
+                  className="relative pl-6 border-l-2"
+                  style={{ borderColor: "rgba(102, 126, 234, 0.3)" }}
+                >
+                  <div
+                    className="absolute -left-2 top-0 w-4 h-4 rounded-full"
+                    style={{
+                      background:
+                        "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+                    }}
+                  ></div>
+                  <h4
+                    className="font-bold mb-2 text-lg"
+                    style={{ color: "#667eea" }}
+                  >
+                    Cloud Computing Certification
+                  </h4>
+                  <p
+                    className="font-medium mb-2"
+                    style={{ color: "var(--foreground)" }}
+                  >
+                    Simplilearn online platform
+                  </p>
+                  <div
+                    className="flex items-center gap-2 text-sm"
+                    style={{ color: "var(--muted-foreground)" }}
+                  >
+                    <Calendar size={16} />
+                    <span>Completed: December 2025</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -279,7 +310,7 @@ export default function About() {
                       WebkitTextFillColor: "transparent",
                     }}
                   >
-                    2+
+                    1+
                   </div>
                   <div
                     className="text-xs"

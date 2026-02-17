@@ -297,7 +297,7 @@ export default function Experience() {
             className="text-lg font-medium mb-4"
             style={{ color: "var(--foreground)" }}
           >
-            💼 Looking for passionate developers?
+            💼 Looking for a passionate software engineer?
           </p>
           <p className="mb-6" style={{ color: "var(--muted-foreground)" }}>
             I'm available for full-time opportunities and exciting projects.

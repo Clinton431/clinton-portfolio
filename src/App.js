@@ -14,6 +14,7 @@ import CTABanner from "./components/CTABanner";
 import Footer from "./components/Footer";
 import DarkModeToggle from "./components/DarkModeToggle";
 import "./index.css";
+import ContactForm from "./components/ContactForm";
 
 export default function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -53,6 +54,7 @@ export default function App() {
       <Testimonials />
       <CTABanner />
       <Footer />
+      {/* <ContactForm /> */}
     </div>
   );
 }
