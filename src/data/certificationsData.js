@@ -1,14 +1,100 @@
 import React from "react";
-import { Cloud, Code, Shield, Database, Layers } from "lucide-react";
+import { Cloud, Code, Shield, Database, Layers, Network } from "lucide-react";
 
 export const certificationsData = [
+  // AWS
   {
-    name: "AWS Cloud Practitioner",
-    status: "In Progress",
+    name: "AWS Cloud Practitioner Essentials",
+    status: "Completed",
     icon: <Cloud size={20} />,
     issuer: "Amazon Web Services",
-    expectedDate: "January 2025",
+    link: "#",
   },
+  {
+    name: "AWS Networking Basics",
+    status: "Completed",
+    icon: <Network size={20} />,
+    issuer: "Amazon Web Services",
+    link: "#",
+  },
+  {
+    name: "AWS Networking Practical Approaches",
+    status: "Completed",
+    icon: <Network size={20} />,
+    issuer: "Amazon Web Services",
+    link: "#",
+  },
+  {
+    name: "AWS Security Best Practices: Network Infrastructure",
+    status: "Completed",
+    icon: <Shield size={20} />,
+    issuer: "Amazon Web Services",
+    link: "#",
+  },
+  {
+    name: "AWS Security Fundamentals",
+    status: "Completed",
+    icon: <Shield size={20} />,
+    issuer: "Amazon Web Services",
+    link: "#",
+  },
+  {
+    name: "AWS Security – Encryption Fundamentals",
+    status: "Completed",
+    icon: <Shield size={20} />,
+    issuer: "Amazon Web Services",
+    link: "#",
+  },
+  {
+    name: "AWS SimuLearn: Networking Concepts",
+    status: "In Progress",
+    icon: <Network size={20} />,
+    issuer: "Amazon Web Services",
+  },
+  {
+    name: "Designing Event-Driven Architectures",
+    status: "Completed",
+    icon: <Layers size={20} />,
+    issuer: "Amazon Web Services",
+    link: "#",
+  },
+  {
+    name: "Network Load Balancer (NLB) Getting Started",
+    status: "Completed",
+    icon: <Network size={20} />,
+    issuer: "Amazon Web Services",
+    link: "#",
+  },
+  {
+    name: "Understanding AWS Networking Gateways",
+    status: "Completed",
+    icon: <Network size={20} />,
+    issuer: "Amazon Web Services",
+    link: "#",
+  },
+  // Cisco CCNA
+  {
+    name: "CCNA 1: Introduction to Networks",
+    status: "Completed",
+    icon: <Network size={20} />,
+    issuer: "Cisco Networking Academy",
+    link: "#",
+  },
+  {
+    name: "CCNA 2: Switching, Routing, and Wireless Essentials",
+    status: "Completed",
+    icon: <Network size={20} />,
+    issuer: "Cisco Networking Academy",
+    link: "#",
+  },
+  {
+    name: "CCNA 3: Enterprise Networking, Security, and Automation",
+    status: "Completed",
+    icon: <Network size={20} />,
+    issuer: "Cisco Networking Academy",
+    link: "#",
+  },
+  // Existing entries — verify these are accurate before publishing
   {
     name: "Full Stack Web Development",
     status: "Completed",

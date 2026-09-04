@@ -4,55 +4,77 @@ import {
   MapPin,
   Calendar,
   CheckCircle2,
-  TrendingUp,
+  Cloud,
   Users,
-  Code,
-  Target,
+  Wrench,
+  LifeBuoy,
 } from "lucide-react";
 
 export default function Experience() {
+  const [hoveredCard, setHoveredCard] = useState(null);
   const [hoveredAchievement, setHoveredAchievement] = useState(null);
 
   const experiences = [
     {
-      title: "Software Developer Attaché",
-      company: "Ministry of Health",
-      location: "Nairobi, Kenya",
-      period: "April - September 2024",
+      title: "Cloud Intern",
+      company: "Konza Technopolis Development Authority",
+      location: "Konza, Machakos County, Kenya",
+      period: "2025 – Present",
       type: "Internship",
       achievements: [
         {
-          icon: <Code size={20} />,
-          text: "Developed and maintained full-stack components for the national healthcare information system,",
-          highlight: "improving data management and accessibility",
-          detail: "for healthcare professionals",
+          icon: <Cloud size={20} />,
+          text: "Supporting cloud infrastructure management and deployment activities within the technopolis environment.",
+        },
+        {
+          icon: <Wrench size={20} />,
+          text: "Assisting in the configuration and monitoring of cloud-based systems and services.",
         },
         {
           icon: <Users size={20} />,
-          text: "Collaborated with UX designers and backend engineers to implement responsive interfaces, reducing navigation time",
-          highlight: "and increasing user satisfaction",
-          detail: "",
+          text: "Collaborating with the IT team on cloud solutions, automation scripts, and system optimization.",
         },
         {
-          icon: <TrendingUp size={20} />,
-          text: "Created automated Python scripts that streamlined data migration processes, reducing manual workload",
-          highlight: "by 25% and enhancing productivity",
-          detail: "while improving data accuracy",
-        },
-        {
-          icon: <Target size={20} />,
-          text: "Participated in Agile sprints, completing",
-          highlight: "three major project milestones ahead of schedule",
-          detail: "with minimal defects",
+          icon: <CheckCircle2 size={20} />,
+          text: "Gaining hands-on experience with cloud platforms and enterprise-level infrastructure management.",
         },
       ],
       skills: [
-        "React",
-        "Python",
-        "Full-Stack",
-        "Healthcare IT",
-        "Agile",
-        "UI/UX",
+        "Cloud Infrastructure",
+        "Automation",
+        "Linux",
+        "System Administration",
+      ],
+    },
+    {
+      title: "IT Support Attaché",
+      company: "Ministry of Health",
+      location: "Kenya",
+      period: "2024",
+      type: "Internship",
+      achievements: [
+        {
+          icon: <LifeBuoy size={20} />,
+          text: "Provided technical support and troubleshooting for hardware, software, and network issues across departments.",
+        },
+        {
+          icon: <Wrench size={20} />,
+          text: "Assisted in the installation, configuration, and maintenance of IT systems and equipment.",
+        },
+        {
+          icon: <Users size={20} />,
+          text: "Supported end-users with day-to-day ICT needs including system access, connectivity, and software usage.",
+        },
+        {
+          icon: <CheckCircle2 size={20} />,
+          text: "Gained practical experience in a large-scale government IT environment and public sector service delivery.",
+        },
+      ],
+      skills: [
+        "IT Support",
+        "Troubleshooting",
+        "Networking",
+        "Hardware & Software",
       ],
     },
   ];
@@ -86,14 +108,19 @@ export default function Experience() {
               margin: "0 auto",
             }}
           >
-            Real-world impact through innovative software solutions
+            Hands-on experience across cloud infrastructure and IT support
           </p>
         </div>
 
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <article key={index} className="relative group">
-              {/* Timeline dot - for multiple experiences */}
+            <article
+              key={index}
+              className="relative group"
+              onMouseEnter={() => setHoveredCard(index)}
+              onMouseLeave={() => setHoveredCard(null)}
+            >
+              {/* Timeline dot */}
               <div
                 className="absolute left-0 top-8 w-4 h-4 rounded-full hidden md:block"
                 style={{
@@ -103,10 +130,14 @@ export default function Experience() {
               />
 
               <div
-                className="md:ml-12 rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-2xl"
+                className="md:ml-12 rounded-2xl overflow-hidden transition-all duration-500"
                 style={{
                   backgroundColor: "var(--card)",
                   border: "2px solid var(--border)",
+                  boxShadow:
+                    hoveredCard === index
+                      ? "0 20px 40px rgba(0,0,0,0.12)"
+                      : "none",
                 }}
               >
                 {/* Top accent bar */}
@@ -185,61 +216,57 @@ export default function Experience() {
                       style={{ color: "var(--muted-foreground)" }}
                     >
                       <CheckCircle2 size={16} />
-                      Key Achievements
+                      Key Responsibilities
                     </h4>
 
                     <div className="space-y-4">
-                      {exp.achievements.map((achievement, i) => (
-                        <div
-                          key={i}
-                          onMouseEnter={() => setHoveredAchievement(i)}
-                          onMouseLeave={() => setHoveredAchievement(null)}
-                          className="flex gap-4 p-4 rounded-xl transition-all duration-300"
-                          style={{
-                            backgroundColor:
-                              hoveredAchievement === i
-                                ? "rgba(59,130,246,0.05)"
-                                : "transparent",
-                            transform:
-                              hoveredAchievement === i
-                                ? "translateX(8px)"
-                                : "translateX(0)",
-                          }}
-                        >
+                      {exp.achievements.map((achievement, i) => {
+                        const key = `${index}-${i}`;
+                        return (
                           <div
-                            className="flex-shrink-0 p-2 rounded-lg transition-all duration-300"
+                            key={i}
+                            onMouseEnter={() => setHoveredAchievement(key)}
+                            onMouseLeave={() => setHoveredAchievement(null)}
+                            className="flex gap-4 p-4 rounded-xl transition-all duration-300"
                             style={{
-                              backgroundColor: "rgba(59,130,246,0.12)",
-                              color: "var(--primary)",
+                              backgroundColor:
+                                hoveredAchievement === key
+                                  ? "rgba(59,130,246,0.05)"
+                                  : "transparent",
                               transform:
-                                hoveredAchievement === i
-                                  ? "scale(1.1) rotate(5deg)"
-                                  : "scale(1) rotate(0deg)",
+                                hoveredAchievement === key
+                                  ? "translateX(8px)"
+                                  : "translateX(0)",
                             }}
                           >
-                            {achievement.icon}
-                          </div>
-
-                          <div className="flex-1">
-                            <p
-                              className="leading-relaxed"
+                            <div
+                              className="flex-shrink-0 p-2 rounded-lg transition-all duration-300"
                               style={{
-                                color: "var(--muted-foreground)",
-                                fontSize: "0.95rem",
+                                backgroundColor: "rgba(59,130,246,0.12)",
+                                color: "var(--primary)",
+                                transform:
+                                  hoveredAchievement === key
+                                    ? "scale(1.1) rotate(5deg)"
+                                    : "scale(1) rotate(0deg)",
                               }}
                             >
-                              {achievement.text}{" "}
-                              <span
-                                className="font-semibold"
-                                style={{ color: "var(--primary)" }}
+                              {achievement.icon}
+                            </div>
+
+                            <div className="flex-1">
+                              <p
+                                className="leading-relaxed"
+                                style={{
+                                  color: "var(--muted-foreground)",
+                                  fontSize: "0.95rem",
+                                }}
                               >
-                                {achievement.highlight}
-                              </span>{" "}
-                              {achievement.detail}
-                            </p>
+                                {achievement.text}
+                              </p>
+                            </div>
                           </div>
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   </div>
 

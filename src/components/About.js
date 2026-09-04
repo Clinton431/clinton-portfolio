@@ -33,11 +33,11 @@ export default function About() {
           ></div>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-2 items-start mb-12">
+        <div className="grid gap-8 lg:grid-cols-2 items-stretch mb-12">
           {/* Left Column - Bio */}
-          <div className="space-y-6">
+          <div className="space-y-6 h-full flex flex-col">
             <div
-              className="p-8 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]"
+              className="p-8 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] flex-1 flex flex-col"
               style={{
                 background: "rgba(255, 255, 255, 0.05)",
                 borderColor: "rgba(255, 255, 255, 0.1)",
@@ -69,12 +69,13 @@ export default function About() {
                   lineHeight: "1.75",
                 }}
               >
-                I'm a detail-oriented junior Software Engineer with hands-on
-                experience in full-stack development and process automation. My
-                journey has taken me through developing healthcare information
-                systems at the Ministry of Health, where I improved data
-                management and reduced manual workloads significantly. I have
-                also developed e-commerce platforms.
+                I'm a tech enthusiast and junior software engineer with hands-on
+                experience in cloud infrastructure and IT support. My journey
+                has taken me through supporting cloud systems at Konza
+                Technopolis and providing IT support in a large government
+                environment at the Ministry of Health. I spend much of my free
+                time working with Linux systems, reading documentation, and
+                using it to automate repetitive tasks.
               </p>
               <p
                 className="leading-relaxed"
@@ -84,10 +85,10 @@ export default function About() {
                   lineHeight: "1.75",
                 }}
               >
-                I thrive in collaborative environments and have a proven track
-                record of delivering projects ahead of schedule. My passion lies
-                in creating efficient, user-friendly solutions that make a real
-                impact.
+                Outside of work, I build full-stack projects on the side — from
+                inventory and hotel management systems to Linux automation
+                scripts — and enjoy breaking down complex problems by mapping
+                out how different components relate to each other.
               </p>
             </div>
 
@@ -155,7 +156,7 @@ export default function About() {
                       className="text-sm font-semibold"
                       style={{ color: "var(--foreground)" }}
                     >
-                      Nairobi, Kenya
+                      Kenya
                     </span>
                   </div>
                 </div>
@@ -164,9 +165,9 @@ export default function About() {
           </div>
 
           {/* Right Column - Education */}
-          <div className="space-y-6">
+          <div className="space-y-6 h-full flex flex-col">
             <div
-              className="p-8 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:shadow-2xl"
+              className="p-8 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:shadow-2xl flex-1 flex flex-col"
               style={{
                 background: "rgba(255, 255, 255, 0.05)",
                 borderColor: "rgba(255, 255, 255, 0.1)",
@@ -213,7 +214,7 @@ export default function About() {
                     className="font-medium mb-2"
                     style={{ color: "var(--foreground)" }}
                   >
-                    ALX University, Nairobi
+                    ALX Africa
                   </p>
                   <div
                     className="flex items-center gap-2 text-sm"
@@ -246,7 +247,7 @@ export default function About() {
                     className="font-medium mb-2"
                     style={{ color: "var(--foreground)" }}
                   >
-                    Murang'a University Of Technology
+                    Murang'a University of Technology
                   </p>
                   <div
                     className="flex items-center gap-2 text-sm"
@@ -257,36 +258,33 @@ export default function About() {
                   </div>
                 </div>
 
-                {/* Education Item 3 */}
-                <div
-                  className="relative pl-6 border-l-2"
-                  style={{ borderColor: "rgba(102, 126, 234, 0.3)" }}
-                >
+                {/* Education Item 3 - currently in progress */}
+                <div className="relative pl-6">
                   <div
-                    className="absolute -left-2 top-0 w-4 h-4 rounded-full"
+                    className="absolute -left-2 top-0 w-4 h-4 rounded-full border-2"
                     style={{
-                      background:
-                        "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+                      background: "var(--card)",
+                      borderColor: "#667eea",
                     }}
                   ></div>
                   <h4
                     className="font-bold mb-2 text-lg"
                     style={{ color: "#667eea" }}
                   >
-                    Cloud Computing Certification
+                    AWS SimuLearn: Networking Concepts
                   </h4>
                   <p
                     className="font-medium mb-2"
                     style={{ color: "var(--foreground)" }}
                   >
-                    Simplilearn online platform
+                    Amazon Web Services
                   </p>
                   <div
                     className="flex items-center gap-2 text-sm"
                     style={{ color: "var(--muted-foreground)" }}
                   >
                     <Calendar size={16} />
-                    <span>Completed: December 2025</span>
+                    <span>In Progress</span>
                   </div>
                 </div>
               </div>
@@ -331,13 +329,13 @@ export default function About() {
                       WebkitTextFillColor: "transparent",
                     }}
                   >
-                    15+
+                    4+
                   </div>
                   <div
                     className="text-xs"
                     style={{ color: "var(--muted-foreground)" }}
                   >
-                    Projects Done
+                    Projects Built
                   </div>
                 </div>
                 <div>
@@ -350,13 +348,13 @@ export default function About() {
                       WebkitTextFillColor: "transparent",
                     }}
                   >
-                    100%
+                    12+
                   </div>
                   <div
                     className="text-xs"
                     style={{ color: "var(--muted-foreground)" }}
                   >
-                    Client Satisfaction
+                    Certifications
                   </div>
                 </div>
               </div>

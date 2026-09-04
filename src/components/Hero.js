@@ -4,13 +4,14 @@ import {
   ExternalLink,
   Linkedin,
   Github,
+  Twitter,
   ArrowDown,
   Sparkles,
 } from "lucide-react";
 
 export default function Hero({ isVisible }) {
   return (
-    <section className="flex items-center justify-center min-h-screen overflow-hidden relative">
+    <section className="flex items-center justify-center min-h-screen overflow-hidden relative pt-24">
       {/* Animated background effects */}
       <div
         className="absolute inset-0 opacity-30"
@@ -74,7 +75,7 @@ export default function Hero({ isVisible }) {
             style={{ backgroundColor: "var(--card)" }}
           >
             <img
-              src="images/"
+              src="/images/profile.jpeg"
               alt="Clinton Nyakoe"
               className="w-full h-full object-cover rounded-full transition-transform duration-500 group-hover:scale-110"
               onError={(e) => {
@@ -182,7 +183,7 @@ export default function Hero({ isVisible }) {
             color: "var(--muted-foreground)",
           }}
         >
-          Full-stack developer passionate about leveraging technology to solve
+          Software engineer passionate about leveraging technology to solve
           real-world problems. Specialized in{" "}
           <span
             className="font-semibold px-2 py-1 rounded"
@@ -191,7 +192,7 @@ export default function Hero({ isVisible }) {
               backgroundColor: "rgba(59,130,246,0.1)",
             }}
           >
-            healthcare systems
+            cloud infrastructure
           </span>
           ,{" "}
           <span
@@ -201,7 +202,7 @@ export default function Hero({ isVisible }) {
               backgroundColor: "rgba(59,130,246,0.1)",
             }}
           >
-            automation
+            Linux systems
           </span>
           , and{" "}
           <span
@@ -211,7 +212,7 @@ export default function Hero({ isVisible }) {
               backgroundColor: "rgba(59,130,246,0.1)",
             }}
           >
-            modern web development
+            full-stack web development
           </span>
           .
         </p>
@@ -284,6 +285,11 @@ export default function Hero({ isVisible }) {
               icon: Github,
               href: "https://github.com/Clinton431",
               label: "GitHub",
+            },
+            {
+              icon: Twitter,
+              href: "https://x.com/ClintonNyakoe",
+              label: "X",
             },
           ].map((social, i) => (
             <a

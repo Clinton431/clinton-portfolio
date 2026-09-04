@@ -1,13 +1,13 @@
 export const skillsData = {
-  "Programming Languages": ["Java", "Python", "PHP", "JavaScript"],
-  "Web Development": ["HTML5", "CSS3", "React", "RESTful APIs", "Bootstrap"],
-  "Database Management": ["MySQL", "MongoDB", "SQLite"],
-  "Developer Tools": ["Git", "GitLab", "VS Code", "Docker"],
-  "Operating Systems": ["Linux (Ubuntu, CentOS)", "Windows"],
+  "Programming Languages": ["JavaScript", "Python", "Java", "PHP", "C"],
+  "Web Development": ["HTML5", "CSS3", "JavaScript", "React", "Node.js", "PHP"],
+  "Database Management": ["MySQL", "MongoDB", "PostgreSQL"],
+  "Developer Tools": ["Git", "GitLab", "VS Code"],
+  "Operating Systems": ["Linux (Ubuntu, CentOS, Arch)", "Windows"],
   "Other Skills": [
-    "Agile Methodology",
-    "Test-Driven Development",
-    "CI/CD",
+    "Bash Scripting & Automation",
     "AWS Cloud Services",
+    "Huawei Cloud",
+    "Agile Methodology",
   ],
 };
